@@ -1,0 +1,52 @@
+body {
+  border: 1px red solid;
+  margin: 15px;
+}
+
+div {
+  text-align: center;
+  font-size: 24px;
+  padding: 0px;
+}
+div h1 {
+  color: green;
+  display: inline;
+  border-bottom: 1px solid blue;
+  margin-top: 1rem;
+}
+
+.one {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.one article {
+  width: 100%;
+  padding: 10px 1rem;
+  margin-top: 1rem;
+  color: red;
+  border: 1px solid green;
+  font-size: 24px;
+}
+.one article:nth-child(odd) {
+  color: blue;
+  border: 1px solid green;
+  font-size: 24px;
+}
+
+.two {
+  display: flex;
+  padding: 0px 15px 15px 15px;
+}
+.two article {
+  width: 100%;
+  padding: 15px 1rem;
+  border: 1px solid blue;
+}
+.two p {
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$font-size: 24px;
+$spacer: 1rem;
+
+@mixin article-card($color, $border-color, $font-size: 24px) {
+  color: $color;
+  border: 1px solid $border-color;
+  font-size: $font-size;
+  $spacer: 1rem;
+}
+
+@mixin article-noBorder(
+  $color,
+  $border-color,
+  $font-size: 24px,
+  $spacer: 1rem
+) {
+  color: $color;
+  font-size: $font-size;
+  $spacer: 1rem;
+}
+
+body {
+  border: 1px $color-primary solid;
+  margin: 15px;
+}
+div {
+  text-align: center;
+  font-size: $font-size;
+  padding: 0px;
+  h1 {
+    color: $color-tertiary;
+    display: inline;
+    border-bottom: 1px solid $color-secondary;
+    margin-top: $spacer;
+  }
+}
+
+.one {
+  display: flex;
+  margin-bottom: $spacer;
+  margin-right: 15px;
+  margin-left: 15px;
+  article {
+    width: 100%;
+    padding: 10px $spacer;
+    margin-top: $spacer;
+    @include article-card($color-primary, $color-tertiary, $font-size);
+
+    &:nth-child(odd) {
+      @include article-card($color-secondary, $color-tertiary, $font-size);
+    }
+  }
+}
+
+.two {
+  display: flex;
+  padding: 0px 15px 15px 15px;
+
+  article {
+    width: 100%;
+    padding: 15px $spacer;
+    border: 1px solid $color-secondary;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    @include article-noBorder($color-tertiary, $color-secondary, $font-size);
+  }
+}
